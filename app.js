@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 
-const UserController = require('./controllers/UserController')
-app.use('/users', UserController)
+app.use('/', require('./routes'))
 
 module.exports = app
